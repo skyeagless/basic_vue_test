@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue插槽</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <child>
+<!--            插槽-->
+            <p>Sky</p>
+        </child>
+        <cont>
+<!--            <div class="header" slot="header">Header</div>-->
+            <div class="footer" slot="footer">Footer</div>
+        </cont>
+    </div>
+
+    <script>
+        Vue.component('child',{
+            template:`<div>
+                         <p>Hello</p>
+                         <slot>默认内容</slot>
+                      </div>`
+        });
+
+        Vue.component('cont',{
+            template:`<div>
+                         <slot name="header"><h1>Default header</h1></slot>
+                         <div class="content">content</div>
+                         <slot name="footer"><h2>Default Footer</h2></slot>
+                      </div>`
+        });
+
+        var vm = new Vue({
+            el:"#root",
+        })
+    </script>
+
+</body>
+</html>

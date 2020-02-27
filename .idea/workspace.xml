@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e9cc6716-0281-43b0-9bba-fc2673c1b5ea" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1XOEBYbLUsROTqrQbTKJxum7d6e" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Learning resources\vuejs_test\original_vue_test\列表绑定" />
+      <recent name="E:\Learning resources\vuejs_test\original_vue_test\条件绑定" />
+      <recent name="E:\Learning resources\vuejs_test\original_vue_test\样式绑定" />
+      <recent name="E:\Learning resources\vuejs_test\original_vue_test\计算属性,方法与侦听器" />
+      <recent name="E:\Learning resources\vuejs_test\original_vue_test\Vue的模板语法" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e9cc6716-0281-43b0-9bba-fc2673c1b5ea" name="Default Changelist" comment="" />
+      <created>1580908605394</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580908605394</updated>
+      <workItem from="1580908606727" duration="2967000" />
+      <workItem from="1580989164961" duration="5250000" />
+      <workItem from="1581159468121" duration="3785000" />
+      <workItem from="1581305656013" duration="16733000" />
+      <workItem from="1581382050991" duration="2609000" />
+      <workItem from="1581390432676" duration="350000" />
+      <workItem from="1581488185024" duration="1985000" />
+      <workItem from="1581495280969" duration="7161000" />
+      <workItem from="1581565981342" duration="9956000" />
+      <workItem from="1581679495317" duration="13000" />
+      <workItem from="1581730795466" duration="5296000" />
+      <workItem from="1581740229486" duration="6787000" />
+      <workItem from="1581756500026" duration="15000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="220" y="222" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581734007392">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="220" y="222" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1581734007392" />
+    <state x="998" y="228" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1580992083098">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="998" y="228" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1580992083098" />
+    <state x="778" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1581585969369">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="778" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1581585969369" />
+  </component>
+</project>

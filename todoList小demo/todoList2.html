@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>TodoList</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input type="text" v-model="inputValue"/>
+    <button v-on:click="handleBtnClick">提交</button>
+    <ul>
+        <todo-item v-bind:content = "item" v-for = "item in list"></todo-item>
+    </ul>
+</div>
+
+<script>
+    var TodoItem = {
+        props:['content'],
+        template:"<li>{{content}}</li>"
+    }
+    var app = new Vue({
+        el:'#app',
+        components:{
+            TodoItem: TodoItem
+        },
+        data: {
+            list: [],
+            inputValue:''
+        },
+        methods:{
+            handleBtnClick: function () {
+                this.list.push(this.inputValue)
+                this.inputValue = ''
+            }
+        }
+    })
+</script>
+</body>
+</html>
+
+<!-- v-for:循环数组以便显示 v-on:绑定事件 v-model:双向绑定数据 -->

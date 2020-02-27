@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>样式绑定(class的对象绑定)</title>
+    <script src="../vue.js"></script>
+    <style>
+        .activated{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <p @click="handleDivClick"
+        v-bind:class="{activated: isActivated}"
+        >
+            HelloWorld</p>
+    </div>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                isActivated:false
+            },
+            methods:{
+                handleDivClick:function () {
+                    this.isActivated = !this.isActivated;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

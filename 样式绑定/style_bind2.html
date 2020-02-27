@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>样式绑定2(数组)</title>
+    <script src="../vue.js"></script>
+    <style>
+        .activated{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <p @click="handleDivClick"
+       v-bind:class="[activated,activated1]"
+    >
+        HelloWorld</p>
+</div>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            activated:"",
+            activated1:"activated1"
+        },
+        methods:{
+            //==先转换类型再比较，===先判断类型，如果不是同一类型直接为false。
+            handleDivClick:function () {
+                if(this.activated === "activated"){
+                    this.activated = ""
+                }else{
+                    this.activated = "activated"
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>

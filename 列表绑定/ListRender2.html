@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue中的列表渲染2</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+<!--    加入也需要使用对象引用，直接加入个新项是不行的/不过直接使用vm.userInfo.name='eagle'还是可以的-->
+<!--    不过加入set方法也是可以响应增加的项目key的-->
+<!--    Vue.set(vm.userInfo,"address","huangshan") / vm.$set(vm.userInfo,"address","huangshan")-->
+    <div v-for="(item,key,index) of userInfo">
+        {{item}} ----- {{key}} ----- {{index}}
+    </div>
+<!--    <template v-for="(item,index) of list"-->
+<!--         v-bind:key="item.id">-->
+<!--        <div>-->
+<!--            {{item.text}} &#45;&#45;&#45;&#45; {{index}}-->
+<!--        </div>-->
+<!--        <span>-->
+<!--            {{ item.text }}-->
+<!--        </span>-->
+<!--    </template>-->
+
+</div>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            userInfo:{
+                name:"Sky",
+                age:26,
+                gender:"male",
+                salary:12000,
+            }
+            // list:[ "hello", "dell","nice","to","meet","you"]
+            // list:[{
+            //     id:"001",
+            //     text:"hello"
+            // },{
+            //     id:"002",
+            //     text:"hello2"
+            // },{
+            //     id:"003",
+            //     text:"hello3"
+            // }]
+        }
+    })
+</script>
+
+</body>
+</html>

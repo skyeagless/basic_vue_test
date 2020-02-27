@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue中的列表渲染</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div v-for="(item,index) of list"
+             v-bind:key="item.id">
+            {{item.text}} ---- {{index}}
+        </div>
+    </div>
+<script>
+    //数组：必须使用响应式方法:push,pop,shift,unshift,splice,sort,reverse,不能使用下标
+    //数组：或者使用新的引用(数组)
+    //数组：或者使用set Vue.set(vm.list,1,"sky")
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            // list:[ "hello", "dell","nice","to","meet","you"]
+            list:[{
+                id:"001",
+                text:"hello"
+            },{
+                id:"002",
+                text:"hello2"
+            },{
+                id:"003",
+                text:"hello3"
+            }]
+        }
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <counter v-bind:count="0" @change="handleIncrease"></counter>
+        <counter v-bind:count="1" @change="handleIncrease"></counter>
+        <div>{{total}}</div>
+    </div>
+<!--    单向数据流:子组件不建议给父组件传参数-->
+    <script>
+        var counter = {
+            props:['count'],
+            // 更改克隆副本
+            data:function(){
+                return{
+                    number: this.count
+                }
+            },
+            template:'<div @click="handleClick">{{number}}</div>',
+            methods:{
+                handleClick:function () {
+                    this.number ++;
+                    this.$emit("change",1)
+                }
+            }
+        };
+
+        var vm = new Vue({
+            el:"#root",
+            data:{
+                total: 1,
+            },
+            components:{
+                counter:counter,
+            },
+            methods:{
+                handleIncrease:function (step) {
+                    this.total += step
+                }
+            }
+        })
+    </script>
+
+</body>
+</html>

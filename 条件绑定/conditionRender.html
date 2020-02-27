@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件渲染</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="app">
+<!--        dom直接移除-->
+        <p v-if="show === 'a'">This is A</p>
+        <p v-else-if="show === 'b'">This is B</p>
+<!--        if/else必须连续使用-->
+        <p v-else>This is others</p>
+<!--        style:display:none-->
+<!--        <p v-show="show">{{message}}</p>-->
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                show: "a",
+                message:"Hello World"
+            }
+        })
+    </script>
+
+</body>
+</html>

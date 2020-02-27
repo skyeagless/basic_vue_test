@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue插槽</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<!--    父组件给子组件传递模板，子组件一部分dom结构应该由外部来决定-->
+    <div id="root">
+        <child>
+            <template slot-scope="props">
+                <li>{{props.item}} -- hello</li>
+            </template>
+        </child>
+    </div>
+
+    <script>
+        Vue.component('child',{
+            data: function(){
+                return {
+                    list:[1,2,3,4]
+                }
+            },
+            template:`<div>
+                         <ul>
+<!--                            <li v-for="item of list">{{item}}</li>-->
+                             <slot
+                                v-for="item of list"
+                                v-bind:item = item>
+                            </slot>
+                          </ul>
+                      </div>`
+        });
+
+
+        var vm = new Vue({
+            el:"#root",
+        })
+    </script>
+
+</body>
+</html>

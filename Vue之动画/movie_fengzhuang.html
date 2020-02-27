@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画封装</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="root">
+    <fade v-bind:show="show">
+        <div>hello world</div>
+    </fade>
+<!--    :bind:属性名称=”属性值“-->
+    <fade v-bind:show="show">
+        <h1>hello world</h1>
+    </fade>
+
+    <button @click="handleClick"> 切换 </button>
+</div>
+
+<script>
+    Vue.component('fade',{
+        props:['show'],
+        template:`
+            <transition @before-enter="handleBeforeEnter"
+                        @enter="handleEnter"
+                        @after-enter="handleAfterEnter"
+            >
+                <slot v-if="show"></slot>
+            </transition>
+        `,
+        methods:{
+            handleBeforeEnter:function (el) {
+                el.style.color='red'
+            },
+
+            handleEnter:function (el,done) {
+                setTimeout(()=>{
+                    el.style.color = 'orange'
+                },2000);
+
+                setTimeout(()=>{
+                    done()
+                },4000)
+            },
+
+            handleAfterEnter:function (el) {
+                el.style.color='black'
+            }
+        }
+    });
+
+
+    var vm = new Vue({
+        el:"#root",
+        data:{
+            show:true
+        },
+        methods:{
+            handleClick:function () {
+                this.show = !this.show
+            },
+        }
+    })
+</script>
+
+</body>
+</html>

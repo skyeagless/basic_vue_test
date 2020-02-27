@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件渲染2</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <div v-if="show">
+<!--        key表示唯一元素.就会全部刷新,Vue就不会复用-->
+        用户名: <input key="username"/>
+    </div>
+    <div v-else>
+        邮箱名: <input key="emailname"/>
+    </div>
+</div>
+
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            show: false,
+        }
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>样式绑定3(内联样式) </title>
+    <script src="../vue.js"></script>
+
+</head>
+<body>
+<div id="app">
+    <p v-bind:style="[styleObj,fontSize]" @click="handleDivClick">
+        HelloWorld
+    </p>
+</div>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data:{
+            styleObj: {
+                color:"black",
+                fontSize:"40px",
+            }
+        },
+        methods:{
+            handleDivClick:function () {
+                this.styleObj.color =
+                    this.styleObj.color=== "black" ? "red" :"black";
+            }
+        }
+    })
+</script>
+</body>
+</html>
