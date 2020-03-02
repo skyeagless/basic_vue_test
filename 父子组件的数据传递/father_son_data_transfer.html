@@ -12,7 +12,7 @@
         <counter v-bind:count="1" @change="handleIncrease"></counter>
         <div>{{total}}</div>
     </div>
-<!--    单向数据流:子组件不建议给父组件传参数-->
+<!--    单向数据流:子组件不建议给父组件传的参数进行修改-->
     <script>
         var counter = {
             props:['count'],
